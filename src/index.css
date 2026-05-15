@@ -1,77 +1,77 @@
+@import "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:wght@300;400;700&family=Fira+Code:wght@300;400;500;700&display=swap";
 @import "tailwindcss";
 
-@theme {
-  --color-dracula-bg: #282a36;
-  --color-dracula-bg-dark: #1e1f29;
-  --color-dracula-current: #44475a;
-  --color-dracula-fg: #f8f8f2;
-  --color-dracula-comment: #6272a4;
-  --color-dracula-cyan: #8be9fd;
-  --color-dracula-green: #50fa7b;
-  --color-dracula-orange: #ffb86c;
-  --color-dracula-pink: #ff79c6;
-  --color-dracula-purple: #bd93f9;
-  --color-dracula-red: #ff5555;
-  --color-dracula-yellow: #f1fa8c;
-}
-
 :root {
-  font-family: 'Fira Code', 'Ubuntu Mono', 'Courier New', monospace;
-  background-color: var(--color-dracula-bg);
-  color: var(--color-dracula-fg);
+  /* Fonts */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Lato', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Elegant Theme - Dark (Default & Only) */
+  --elegant-bg: #0f172a;
+  --elegant-fg: #f1f5f9;
+  --elegant-accent: #94a3b8;
+  --elegant-border: #1e293b;
+  --elegant-subtle: #1e293b;
+  --elegant-primary: #60a5fa;
+  --elegant-secondary: #a78bfa;
+  --elegant-success: #34d399;
+  --elegant-warning: #fbbf24;
+  --elegant-danger: #f87171;
+  --elegant-info: #22d3ee;
+
+  /* Apply defaults */
+  font-family: var(--font-mono), var(--font-sans), monospace;
+  background-color: var(--elegant-bg);
+  color: var(--elegant-fg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@theme {
+  --color-elegant-bg: var(--elegant-bg);
+  --color-elegant-fg: var(--elegant-fg);
+  --color-elegant-accent: var(--elegant-accent);
+  --color-elegant-border: var(--elegant-border);
+  --color-elegant-subtle: var(--elegant-subtle);
+  --color-elegant-primary: var(--elegant-primary);
+  --color-elegant-secondary: var(--elegant-secondary);
+  --color-elegant-success: var(--elegant-success);
+  --color-elegant-warning: var(--elegant-warning);
+  --color-elegant-danger: var(--elegant-danger);
+  --color-elegant-info: var(--elegant-info);
+}
+
+.font-serif { font-family: var(--font-serif); }
+.font-sans { font-family: var(--font-sans); }
+.font-mono { font-family: var(--font-mono); }
+
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: var(--color-dracula-bg-dark); /* Fallback for body outside the app */
+  background-color: var(--elegant-bg);
+  color: var(--elegant-fg);
 }
 
-/* Custom Scrollbar for Dracula Theme */
-::-webkit-scrollbar {
-  width: 8px;
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { 
+  background: var(--elegant-border);
+  border-radius: 10px;
 }
-::-webkit-scrollbar-track {
-  background: var(--color-dracula-bg);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-dracula-current);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-dracula-comment);
-}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--elegant-accent); }
+
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(2px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
 
-.animate-fade-in {
-  animation: fadeIn 0.3s ease-out forwards;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.animate-blink {
-  animation: blink 1s step-end infinite;
-}
-
-.animate-blink-fast {
-  animation: blink 0.5s step-end infinite;
-}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.animate-blink { animation: blink 1s step-end infinite; }
