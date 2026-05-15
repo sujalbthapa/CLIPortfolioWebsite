@@ -33,17 +33,17 @@ export function WhoamiOutput() {
           </p>
         </div>
         <div className="mt-4 flex flex-wrap gap-4 border-t border-elegant-border pt-4">
-           <div className="flex flex-col">
-             <span className="text-[10px] text-elegant-secondary font-bold uppercase">Software Engineering</span>
-             <span className="text-xs opacity-70">NCIT, PU (2022-2026)</span>
+           <div className="flex flex-col min-w-[120px]">
+             <span className="text-[9px] sm:text-[10px] text-elegant-secondary font-bold uppercase">Software Engineering</span>
+             <span className="text-[11px] sm:text-xs opacity-70">NCIT, PU (2022-2026)</span>
            </div>
-           <div className="flex flex-col border-l border-elegant-border pl-4">
-             <span className="text-[10px] text-elegant-success font-bold uppercase">Diplomacy</span>
-             <span className="text-xs opacity-70">MUN Trainer & Executive</span>
+           <div className="flex flex-col border-l border-elegant-border pl-4 min-w-[120px]">
+             <span className="text-[9px] sm:text-[10px] text-elegant-success font-bold uppercase">Diplomacy</span>
+             <span className="text-[11px] sm:text-xs opacity-70">MUN Trainer & Executive</span>
            </div>
-           <div className="flex flex-col border-l border-elegant-border pl-4">
-             <span className="text-[10px] text-elegant-warning font-bold uppercase">Design</span>
-             <span className="text-xs opacity-70">UI/UX & Branding Specialist</span>
+           <div className="flex flex-col border-l border-elegant-border pl-4 min-w-[120px]">
+             <span className="text-[9px] sm:text-[10px] text-elegant-warning font-bold uppercase">Design</span>
+             <span className="text-[11px] sm:text-xs opacity-70">UI/UX & Branding Specialist</span>
            </div>
         </div>
         <p className="text-[10px] text-elegant-info mt-4 italic">
@@ -62,10 +62,10 @@ export function ExperienceOutput() {
         <div key={i} className="group border-l-2 border-elegant-border pl-6 relative pb-2">
           <div className="absolute w-3 h-3 bg-elegant-secondary rounded-full -left-[7.5px] top-1.5 shadow-sm" />
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
-             <h4 className="font-bold text-elegant-primary uppercase tracking-tight">{item.role}</h4>
+             <h4 className="text-sm sm:text-base font-bold text-elegant-primary uppercase tracking-tight">{item.role}</h4>
              <span className="text-[10px] text-elegant-warning font-bold uppercase">{item.date}</span>
           </div>
-          <p className="text-sm font-bold opacity-90 mb-2">@ {item.company}</p>
+          <p className="text-[13px] sm:text-sm font-bold opacity-90 mb-2">@ {item.company}</p>
           <p className="text-xs opacity-80 leading-relaxed max-w-3xl">{item.desc}</p>
         </div>
       ))}
@@ -124,18 +124,18 @@ export function MunHighlightsOutput() {
     <div className="mt-2 space-y-6 animate-fade-in font-mono text-elegant-fg">
       <p className="text-[10px] uppercase tracking-[0.2em] text-elegant-secondary mb-4 font-bold">DIPLOMACY & MUN ARCHIVE</p>
       
-      <div className="flex gap-8 border-b border-elegant-border pb-6">
+      <div className="grid grid-cols-2 sm:flex sm:gap-8 border-b border-elegant-border pb-6 gap-4">
         <div>
-          <p className="text-3xl font-bold text-elegant-primary">60+</p>
-          <p className="text-[9px] uppercase tracking-widest opacity-60">Conferences</p>
+          <p className="text-2xl sm:text-3xl font-bold text-elegant-primary">60+</p>
+          <p className="text-[8px] sm:text-[9px] uppercase tracking-widest opacity-60">Conferences</p>
         </div>
-        <div className="border-l border-elegant-border pl-8">
-          <p className="text-3xl font-bold text-elegant-secondary">17</p>
-          <p className="text-[9px] uppercase tracking-widest opacity-60">Press Roles</p>
+        <div className="sm:border-l sm:border-elegant-border sm:pl-8">
+          <p className="text-2xl sm:text-3xl font-bold text-elegant-secondary">17</p>
+          <p className="text-[8px] sm:text-[9px] uppercase tracking-widest opacity-60">Press Roles</p>
         </div>
-        <div className="border-l border-elegant-border pl-8">
-          <p className="text-3xl font-bold text-elegant-success">50</p>
-          <p className="text-[9px] uppercase tracking-widest opacity-60">Dais Roles</p>
+        <div className="sm:border-l sm:border-elegant-border sm:pl-8">
+          <p className="text-2xl sm:text-3xl font-bold text-elegant-success">50</p>
+          <p className="text-[8px] sm:text-[9px] uppercase tracking-widest opacity-60">Dais Roles</p>
         </div>
       </div>
 
@@ -211,13 +211,13 @@ export function CivicOutput() {
 
 export function EducationOutput() {
   return (
-    <div className="mt-2 space-y-6 animate-fade-in font-mono text-elegant-fg">
+    <div className="mt-2 space-y-8 sm:space-y-6 animate-fade-in font-mono text-elegant-fg">
       <p className="text-[10px] uppercase tracking-[0.2em] text-elegant-secondary mb-4 font-bold">ACADEMIC FOUNDATIONS</p>
       {EDUCATION.map((e, i) => (
-        <div key={i} className="flex gap-6 group">
-           <div className="text-[10px] text-elegant-warning font-bold w-32 shrink-0 uppercase pt-1.5">{e.date}</div>
+        <div key={i} className="flex flex-col sm:flex-row gap-2 sm:gap-6 group">
+           <div className="text-[10px] text-elegant-warning font-bold sm:w-32 shrink-0 uppercase pt-1.5">{e.date}</div>
            <div className="pb-6 border-b border-elegant-border flex-1">
-              <h4 className="text-xl font-bold text-elegant-primary">{e.degree}</h4>
+              <h4 className="text-lg sm:text-xl font-bold text-elegant-primary">{e.degree}</h4>
               <p className="text-sm font-bold opacity-90 mt-1">{e.inst}</p>
               <p className="text-xs opacity-70 mt-2 leading-relaxed max-w-2xl">{e.desc}</p>
               {e.coursework && (
@@ -236,9 +236,9 @@ export function HelpOutput() {
       <p className="text-[10px] uppercase tracking-[0.2em] text-elegant-secondary mb-4 font-bold">AVAILABLE COMMANDS</p>
       <div className="grid grid-cols-1 gap-2">
         {HELP_TEXT.map((h) => (
-          <div key={h.cmd} className="flex gap-4 text-xs py-2 border-b border-elegant-border/10">
-            <span className="font-bold w-48 shrink-0 text-elegant-primary">{h.cmd}</span>
-            <span className="opacity-40">→</span>
+          <div key={h.cmd} className="flex flex-col sm:flex-row sm:gap-4 text-xs py-2 border-b border-elegant-border/10">
+            <span className="font-bold sm:w-48 shrink-0 text-elegant-primary">{h.cmd}</span>
+            <span className="hidden sm:inline opacity-40">→</span>
             <span className="text-elegant-fg dark:text-elegant-dark-fg opacity-80">{h.desc}</span>
           </div>
         ))}
@@ -278,8 +278,8 @@ export function PoetryOutput() {
       <p className="text-xs italic text-elegant-secondary">
         Directory changed to <span className="underline decoration-elegant-warning font-bold">/poetry</span>
       </p>
-      <div className="p-8 border-2 border-elegant-secondary/30 bg-elegant-secondary/5 rounded-2xl">
-        <p className="text-xl leading-relaxed italic max-w-2xl">
+      <div className="p-4 sm:p-8 border-2 border-elegant-secondary/30 bg-elegant-secondary/5 rounded-2xl">
+        <p className="text-lg sm:text-xl leading-relaxed italic max-w-2xl">
           "Where logic meets lyricism — a space where <span className="text-elegant-primary">binary trees</span> bloom into metaphors and <span className="text-elegant-secondary">recursive patterns</span> echo through verse."
         </p>
       </div>
