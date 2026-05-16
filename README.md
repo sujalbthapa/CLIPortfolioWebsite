@@ -1,16 +1,47 @@
-# React + Vite
+# Sujal Bikram Thapa — Software Engineer & Creative Strategist
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository houses my terminal-based digital portfolio—a specialized environment designed to bridge the gap between technical engineering and creative strategy. Unlike a traditional website, this CLI interface reflects my passion for systems, logic, and structured communication.
 
-Currently, two official plugins are available:
+**Live Terminal:** [cli.sujalbthapa.com.np](https://cli.sujalbthapa.com.np)  
+**Primary Portfolio:** [sujalbthapa.com.np](https://sujalbthapa.com.np)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👤 About Me
 
-## React Compiler
+I am a Software Engineering student at NCIT (PU) with a deep interest in scalable architectures, secure systems, and the intersection of technology with diplomacy. Beyond code, I am the Co-Founder of **Lunar Chronicles Ltd.** and an active member of the international **MUN** and **Rotaract** circuits.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Engineering:** Focused on React, TypeScript, and deep learning research (published in IEEE ICISCT 2025).
+- **Diplomacy:** 60+ conferences in the MUN circuit, specializing in international press and crisis management.
+- **Design:** UI/UX and Branding specialist with a focus on editorial aesthetics.
 
-## Expanding the ESLint configuration
+## ⌨️ The Interface
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This portfolio is built to be explored. It supports command history, tab-completion, and a variety of specialized logs:
+
+- `whoami`: Personal profile and philosophy.
+- `cat experience.txt`: A log of my professional impact across startups and student organizations.
+- `cat skills.txt`: Domains of expertise spanning from Software Architecture to Geopolitics.
+- `cat research.txt`: Details on my IEEE publication regarding Retinal Fundus Disease Detection.
+- `cv`: Direct access to my latest Master Resume.
+- `imageviewer`: A visual gallery of my work in diplomacy and design.
+
+## 🛠️ Technical Implementation
+
+This project is a custom-built React environment designed to simulate a high-performance terminal experience.
+
+- **Core:** React 19 & Vite
+- **Styling:** Tailwind CSS 4 (Custom "Elegant" color palette)
+- **Deployment:** Optimized for high-speed delivery on custom domains.
+
+## 💻 Local Exploration
+
+If you'd like to run this environment locally:
+
+```bash
+git clone https://github.com/sujalbthapa/CLIPortfolio.git
+npm install
+npm run dev
+```
+
+---
+*Logic meets lyricism.*  
+[Connect with me on LinkedIn](https://linkedin.com/in/sujalbthapa)

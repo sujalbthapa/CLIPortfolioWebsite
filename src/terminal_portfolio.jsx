@@ -196,6 +196,12 @@ export default function TerminalPortfolio() {
         setInput("");
         return;
     }
+    if (trimmed.toLowerCase() === "cv") {
+        window.open('/Sujal_Bikram_Thapa_Resume.pdf', '_blank');
+        setHistory((h) => [...h, { id: Date.now(), cmd: trimmed, output: { type: "boot", message: "Downloading Master Resume...", success: true } }]);
+        setInput("");
+        return;
+    }
     const result = getCommandOutput(trimmed);
     if (result?.type === "clear") { setHistory([]); setInput(""); return; }
     

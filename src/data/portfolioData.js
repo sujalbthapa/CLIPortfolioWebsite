@@ -39,6 +39,7 @@ export const HELP_TEXT = [
   { cmd: "cat education.txt", desc: "Academic Foundations" },
   { cmd: "cat social.txt", desc: "Digital Presence & Links" },
   { cmd: "cat poetry.txt", desc: "Where Logic Meets Lyricism" },
+  { cmd: "cv", desc: "Download Master Resume" },
   { cmd: "imageviewer", desc: "Open Image Gallery" },
   { cmd: "clear", desc: "Clear terminal" },
   { cmd: "help", desc: "Show this help" },
@@ -58,6 +59,7 @@ export const SIDEBAR_COMMANDS = [
   { label: "Digital Presence", icon: "🌐", cmd: "cat social.txt" },
   { label: "Poetry & Verse", icon: "🖋️", cmd: "cat poetry.txt" },
   { label: "Image Gallery", icon: "🖼️", cmd: "imageviewer" },
+  { label: "Master Resume", icon: "📄", cmd: "cv" },
   { label: "Help", icon: "❓", cmd: "help" },
 ];
 
