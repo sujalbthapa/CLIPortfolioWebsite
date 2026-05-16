@@ -244,7 +244,7 @@ export default function TerminalPortfolio() {
   };
 
   return (
-    <div className={`flex h-screen w-screen overflow-hidden font-mono bg-elegant-bg text-elegant-fg`} onClick={() => inputRef.current?.focus()}>
+    <div className={`flex h-dvh w-screen overflow-hidden font-mono bg-elegant-bg text-elegant-fg`} onClick={() => inputRef.current?.focus()}>
       {showGallery && <ImageViewer images={IMAGES} onClose={() => setShowGallery(false)} />}
 
       {/* Mobile Menu Overlay */}
@@ -313,7 +313,7 @@ export default function TerminalPortfolio() {
       </aside>
 
       <main className="flex flex-col flex-1 min-w-0 overflow-hidden relative bg-elegant-bg">
-        <header className={`shrink-0 px-4 sm:px-8 py-4 sm:py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-2 border-elegant-border bg-elegant-bg/95 backdrop-blur-sm z-10`}>
+        <header className={`shrink-0 px-4 sm:px-8 py-4 sm:py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-2 border-elegant-border bg-elegant-bg/95 backdrop-blur-sm z-10 sticky top-0`}>
           <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-start">
             <div className="flex items-center gap-2">
               <div className="flex gap-2 mr-4 sm:mr-6">
@@ -347,7 +347,7 @@ export default function TerminalPortfolio() {
           </div>
         </header>
 
-        <div className="flex-1 overflow-y-auto px-4 sm:px-10 py-6 sm:py-10 space-y-8 sm:space-y-12 custom-scrollbar scroll-smooth">
+        <div className="flex-1 overflow-y-auto px-4 sm:px-10 pt-6 pb-32 sm:py-10 space-y-8 sm:space-y-12 custom-scrollbar scroll-smooth">
           {history.map((entry) => (
             <div key={entry.id} className="animate-fade-in">
               {entry.cmd && (
