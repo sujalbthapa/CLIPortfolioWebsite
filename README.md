@@ -1,4 +1,5 @@
-# Sujal Bikram Thapa — Software Engineer & Creative Strategist
+# Sujal Bikram Thapa — Software Engineer & Creative Strategist 
+#Portfolio CLI
 
 This repository houses my terminal-based digital portfolio—a specialized environment designed to bridge the gap between technical engineering and creative strategy. Unlike a traditional website, this CLI interface reflects my passion for systems, logic, and structured communication.
 
